@@ -1,0 +1,21 @@
+.imgcontainer{
+    position: relative;
+    text-align: center;
+    color: rgb(12, 12, 12);
+    top: 50px;
+}
+.img{
+    width: 70px;
+ 
+    height: 300px;
+}
+.title{
+    position: absolute;
+    top: 100px;
+    bottom: 100px;
+    left: 300px;
+    font-size: 65px;
+    font-weight: 400;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
