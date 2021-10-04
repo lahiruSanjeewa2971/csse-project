@@ -2,13 +2,13 @@ const mongoose = require('mongoose')
 
 const EdataSchema = new mongoose.Schema({
     orderID:String,
-    companyName:String,
+  
     date:String,
     createrName:String,
     companyName:String,
     quantity:Number,
     description:String,
-    items:String,
+    // items:String,
     deliveryAddress:String,
     status:{
         type: String,
@@ -16,7 +16,9 @@ const EdataSchema = new mongoose.Schema({
     },
     itemList:{
         type: Array,
-        default:[]
+        // default:[],
+        name:String,
+        amount:Number
     }
 })
 
