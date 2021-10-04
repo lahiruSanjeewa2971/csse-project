@@ -8,3 +8,4 @@ const EdataSchema = new mongoose.Schema({
 })
 
 mongoose.model("edata",EdataSchema)
+
