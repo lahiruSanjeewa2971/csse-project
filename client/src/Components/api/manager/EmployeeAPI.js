@@ -8,7 +8,7 @@ function EmployeeAPI() {
     const getCustomerList = async () => {
         const res = await axios.get('/user/getUserList')
         setemployee(res.data)
-        console.log(res.data)
+        //console.log(res.data)
     }
 
     useEffect(() => {
