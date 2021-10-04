@@ -24,9 +24,22 @@ const UserSchema = new mongoose.Schema({
         type: Object,
         default: []
     },
+    designation: {
+        type: String,
+    },
+    phone: {
+        type: Number,
+    }, 
+    gender: {
+        type: String,
+    },
     cart: {
         type: Array,
         default: []
+    },
+    status: {
+        type: String,
+        default: "Available"
     }
 },{
     timestamps: true

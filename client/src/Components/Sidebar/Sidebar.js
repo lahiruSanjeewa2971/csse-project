@@ -30,7 +30,7 @@ function Sidebar() {
                         </Link>
                     </li>
                 </ul>
-                <h3 className="sidebarTitle">Employee</h3>
+                <h3 className="sidebarTitle">HRM</h3>
                 <ul className="sidebarList">
                     <li className="sidebarListItem">
                     <Link to ="/add_employee_manager" style={{textDecoration:"none", color:"white"}}>
@@ -39,64 +39,14 @@ function Sidebar() {
                     </Link>
                     </li>
                     <li className="sidebarListItem">
-                    <Link to ="/employee/manage_emp" style={{textDecoration:"none", color:"white"}}>
+                    <Link to ="/manage_employee_manager" style={{textDecoration:"none", color:"white"}}>
                         <CardTravelOutlined className="sidebarIcon"/>
                             Manage Employee
                  </Link>
                     </li>
                    
                 </ul>
-                <h3 className="sidebarTitle">Food Management</h3>
-                    <ul className="sidebarList">
-                            <li className="sidebarListItem">
-                            <Link to ="/dailyMenuView" style={{textDecoration:"none", color:"white"}}>
-                                <CardTravelOutlined className="sidebarIcon"/>
-                                    Today Menu
-                            </Link>
-                            </li>
-                            <li className="sidebarListItem">
-                            <Link to ="/category/addNewCategory" style={{textDecoration:"none", color:"white"}}>
-                                <CardTravelOutlined className="sidebarIcon"/>
-                                    Add Category
-                            </Link>
-                            </li>
-                            <li className="sidebarListItem">
-                            <Link to ="/category/category_list" style={{textDecoration:"none", color:"white"}}>
-                                <CardTravelOutlined className="sidebarIcon"/>
-                                    Category List
-                            </Link>
-                            </li>
-                    </ul>
-                <h3 className="sidebarTitle">Messages</h3>
-                <ul className="sidebarList">
-                    <li className="sidebarListItem">
-                    <Link to ="/messages_maanger" style={{textDecoration:"none", color:"white"}}>
-                        <PeopleAltOutlined className="sidebarIcon"/>
-                            Messages
-                    </Link>
-                    </li>
-                </ul>
-                <h3 className="sidebarTitle">Reports</h3>
-                <ul className="sidebarList">
-                    <li className="sidebarListItem">
-                    <Link to ="/reports/addPayments" style={{textDecoration:"none", color:"white"}}>
-                        <NoteAddOutlined className="sidebarIcon"/>
-                            User Reports
-                    </Link>
-                    </li>
-                    <li className="sidebarListItem">
-                        <Link to ="/payment_detail/:id" style={{textDecoration:"none", color:"white"}}>
-                            <DescriptionOutlined className="sidebarIcon"/>
-                            Add Payments
-                        </Link>
-                    </li>
-                    <li className="sidebarListItem">
-                        <Link to ="/payment_view_list" style={{textDecoration:"none", color:"white"}}>
-                        <DescriptionOutlined className="sidebarIcon"/>
-                            Payment List
-                        </Link>
-                    </li>
-                </ul>
+                
             </div>
         </div>
 
@@ -197,22 +147,35 @@ function Sidebar() {
                         </li>
                        
                     </ul>
-                    <h3 className="sidebarTitle">Categories</h3>
+                    <h3 className="sidebarTitle">Vehicles</h3>
                     <ul className="sidebarList">
+                        <li className="sidebarListItem">
+                        <Link to ="/add_new_vehicle" style={{textDecoration:"none", color:"white"}}> 
+                            <ListAltOutlined className="sidebarIcon"/>
+                                 Add Vehicles
+                         </Link>
+                        </li>
                         <li className="sidebarListItem">
                         <Link to ="/category-list" style={{textDecoration:"none", color:"white"}}> 
                             <ListAltOutlined className="sidebarIcon"/>
-                                 Category List
+                                 Manage Vehicles
                          </Link>
                         </li>
                         
                     </ul>
-                    <h3 className="sidebarTitle">Customers</h3>
+                    <h3 className="sidebarTitle">Items</h3>
                     <ul className="sidebarList">
                         <li className="sidebarListItem">
                         <Link to ="/customers-list" style={{textDecoration:"none", color:"white"}}>
                             <PeopleAltOutlined className="sidebarIcon"/>
-                                Customers List
+                                Add Items
+                        </Link>
+                        </li>
+
+                        <li className="sidebarListItem">
+                        <Link to ="/customers-list" style={{textDecoration:"none", color:"white"}}>
+                            <PeopleAltOutlined className="sidebarIcon"/>
+                                Manage Items
                         </Link>
                         </li>
                     </ul>

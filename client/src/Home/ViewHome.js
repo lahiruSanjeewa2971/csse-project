@@ -23,7 +23,7 @@ function ViewHome() {
                                 <CardMedia
                                     component="img"
                                     height="140"
-                                    image={require('D:/csse/client/src/Components/Images/2.jpg').default}
+                                    image={require('../Components/Images/2.jpg').default}
                                     alt="Site1"
                                 />
                                 <CardContent>
@@ -46,7 +46,7 @@ function ViewHome() {
                                 <CardMedia
                                     component="img"
                                     height="140"
-                                    image={require('D:/csse/client/src/Components/Images/3.jpg').default}
+                                    image={require('../Components/Images/3.jpg').default}
                                     alt="Site1"
                                 />
                                 <CardContent>
@@ -69,7 +69,7 @@ function ViewHome() {
                                 <CardMedia
                                     component="img"
                                     height="140"
-                                    image={require('D:/csse/client/src/Components/Images/4.jpg').default}
+                                    image={require('../Components/Images/4.jpg').default}
                                     alt="Site1"
                                 />
                                 <CardContent>

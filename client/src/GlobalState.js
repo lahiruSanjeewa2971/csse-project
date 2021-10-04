@@ -1,6 +1,7 @@
 import React, {createContext, useState, useEffect} from 'react'
 import axios from 'axios'
 import UserAPI from './Components/api/UserAPI'
+import EmployeeAPI from './Components/api/manager/EmployeeAPI'
 
 export const GlobalState = createContext()
 
@@ -30,7 +31,8 @@ export const DataProvider = ({children}) => {
 
     const state = {
         token: [token, setToken],
-        userAPI: UserAPI(token) 
+        userAPI: UserAPI(token),
+        employeeList: EmployeeAPI()
     }
     
     return (

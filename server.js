@@ -19,6 +19,7 @@ app.use(fileUpload({
 app.use('/user', require('./routes/userRouter'));
 app.use('/api', require('./routes/orderRouter'));
 
+
 /////////Mobile part/////////////////
 app.post('/send-data',(req,res) =>{
     const edataModel = new EdataModel({

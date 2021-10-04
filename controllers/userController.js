@@ -6,7 +6,7 @@ const csUserCtrl = {
 
     register: async (req, res) =>{
         try{
-            const {name, email, password, images} = req.body;
+            const {name, email, password, images, designation, phone, gender } = req.body;
 
             const user = await Users.findOne({email})
 
@@ -18,7 +18,13 @@ const csUserCtrl = {
             const passwordHash = await bcrypt.hash(password, 10)
 
             const newUser = new Users({
-                name, email, password: passwordHash, images
+                name, 
+                email, 
+                password: passwordHash, 
+                images,
+                designation, 
+                phone, 
+                gender
             })
            //res.json({password, passwordHash})
 
@@ -100,6 +106,14 @@ const csUserCtrl = {
 
             res.json(user)
         }catch(err){
+            return res.status(500).json({msg: err.message})
+        }
+    },
+    getUsersList: async (req, res) => {
+        try {
+            const userList = await Users.find()
+            res.json(userList)
+        } catch (err) {
             return res.status(500).json({msg: err.message})
         }
     }
