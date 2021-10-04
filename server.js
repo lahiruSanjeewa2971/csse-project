@@ -1,10 +1,12 @@
 require('dotenv').config()
 const express = require('express')
-const mongoose = require('mongoose')
+// const mongoose = require('mongoose')
 const cors = require('cors')
 const fileUpload = require('express-fileupload')
 const cookieParser = require('cookie-parser')
-
+const mongoose = require('mongoose')
+require('./models/EdataModel')
+const EdataModel = mongoose.model("edata")
 const app = express()
 app.use(express.json())
 app.use(cookieParser())
@@ -16,6 +18,25 @@ app.use(fileUpload({
 //routes
 app.use('/user', require('./routes/userRouter'));
 app.use('/api', require('./routes/orderRouter'));
+
+/////////Mobile part/////////////////
+app.post('/send-data',(req,res) =>{
+    const edataModel = new EdataModel({
+        orderID:req.body.orderID,
+        date:req.body.date,
+        createrName:req.body.createrName,
+        items:req.body.items
+
+    })
+    edataModel.save()
+    .then(data=>{
+        console.log(data)
+        res.send("success")
+    }).catch(err=>{
+        console.log(err)
+    })
+   
+})
 
 
 //connect to DB
