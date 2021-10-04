@@ -2,7 +2,7 @@ const router = require('express').Router()
 const SitesCTRL = require('../controllers/SiteCTRL')
 
 router.route('/sites')
-    .get(SitesCTRL.createNewSite)
-    .post(SitesCTRL.getSitesList)
+    .post(SitesCTRL.createNewSite)
+    .get(SitesCTRL.getSitesList)
 
 module.exports = router

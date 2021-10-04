@@ -44,7 +44,22 @@ function Sidebar() {
                             Manage Employee
                  </Link>
                     </li>
-                   
+                </ul>
+                {/**create-site_manager */}
+                <h3 className="sidebarTitle">Sites</h3>
+                <ul className="sidebarList">
+                    <li className="sidebarListItem">
+                    <Link to ="/create-site_manager" style={{textDecoration:"none", color:"white"}}>
+                        <CardTravelOutlined className="sidebarIcon"/>
+                            Create New Site
+                    </Link>
+                    </li>
+                    <li className="sidebarListItem">
+                    <Link to ="/maange-site_manager" style={{textDecoration:"none", color:"white"}}>
+                        <CardTravelOutlined className="sidebarIcon"/>
+                            Manage Sites
+                 </Link>
+                    </li>
                 </ul>
                 
             </div>
