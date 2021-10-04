@@ -25,7 +25,12 @@ app.post('/send-data',(req,res) =>{
         orderID:req.body.orderID,
         date:req.body.date,
         createrName:req.body.createrName,
-        items:req.body.items
+        companyName:req.body.companyName,
+        items:req.body.items,
+        quantity:req.body.quantity,
+        description:req.body.description,
+        deliveryAddress:req.body.deliveryAddress,
+        itemList:req.body.itemList
 
     })
     edataModel.save()
