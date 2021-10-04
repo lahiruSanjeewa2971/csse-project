@@ -19,6 +19,11 @@ app.use(fileUpload({
 app.use('/user', require('./routes/userRouter'));
 app.use('/api', require('./routes/orderRouter'));
 
+//supplier 
+app.use('/supplier', require('./routes/orders_Supplier_Routes'));
+app.use('/supplier', require('./routes/uploadImagesForSupplier'));
+app.use('/supplier', require('./routes/VehicleRouter'));
+
 
 /////////Mobile part/////////////////
 app.post('/send-data',(req,res) =>{
