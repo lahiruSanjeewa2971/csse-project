@@ -9,9 +9,10 @@ const CreateOrder = () => {
     const[items, SetItems] = useState("")
     const[modal, setModal] = useState(false)
 
-    const submitData = ({navigation}) =>{
+    //navigation removed
+    const submitData = () =>{
        
-            fetch("http://localhost:4000/send-data",{
+            fetch("http://localhost:5000/send-data",{
                 method:"post",
                 headers:{
                     'Content-Type':'application/json'
@@ -26,7 +27,7 @@ const CreateOrder = () => {
             .then(res=>res.json())
             .then(data =>{
                 Alert.alert(`${data.orderID} is saved`)
-                navigation.navigate("Home")
+                // navigation.navigate("Home")
             })
         }
     

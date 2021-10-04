@@ -7,8 +7,8 @@ import CreateOrder from './screens/CreateOrder';
 export default function App() {
   return (
     <View style={styles.container}>
-      {/* <CreateOrder/> */}
-      <Home/>
+      <CreateOrder/>
+      {/* <Home/> */}
     </View>
   );
 }
