@@ -5,6 +5,7 @@ const EdataSchema = new mongoose.Schema({
     companyName:String,
     date:String,
     createrName:String,
+    companyName:String,
     quantity:Number,
     description:String,
     items:String,
