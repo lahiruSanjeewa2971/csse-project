@@ -12,6 +12,10 @@ const EdataSchema = new mongoose.Schema({
     status:{
         type: String,
         default:''
+    },
+    itemList:{
+        type: Array,
+        default:[]
     }
 })
 
