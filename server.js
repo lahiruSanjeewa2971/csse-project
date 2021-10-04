@@ -19,6 +19,8 @@ app.use(fileUpload({
 app.use('/user', require('./routes/userRouter'));
 app.use('/api', require('./routes/orderRouter'));
 
+//maanger
+app.use('/manager', require('./routes/SitesRouter'));
 
 /////////Mobile part/////////////////
 app.post('/send-data',(req,res) =>{

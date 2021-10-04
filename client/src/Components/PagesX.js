@@ -8,6 +8,8 @@ import SHome from '../Components/Supplier/Dashboard/SHome';
 //manager Router
 import AddEmployee from './ManagerComponents/HRM/AddEmployee/AddEmployee';
 import ManageEmployees from './ManagerComponents/HRM/ManageEmployee/ManageEmployees';
+import CreateSite from './ManagerComponents/Sites/CreateSites/CreateSite';
+import ManageSites from './ManagerComponents/Sites/ManageSites/ManageSites';
 
 import {GlobalState} from '../GlobalState';
 function PagesX() {
@@ -24,6 +26,8 @@ function PagesX() {
         
                 <Route path="/add_employee_manager" exact component={AddEmployee} />
                 <Route path="/manage_employee_manager" exact component={ManageEmployees} />
+                <Route path="/create-site_manager" exact component={CreateSite} />
+                <Route path="/maange-site_manager" exact component={ManageSites} />
 
             </Switch>
         </div>

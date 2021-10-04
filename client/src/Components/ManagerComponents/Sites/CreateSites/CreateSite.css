@@ -1,0 +1,39 @@
+.create-site-form{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(238, 253, 224);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 40px;
+}
+.form-new-site label{
+    font-size: 20px;
+    margin-right: 30px;
+}
+.form-new-site input{
+    width: 500px;
+    display: flex;
+    height: 30px;
+    font-size: 20px;
+    border: 1px solid gray;
+}
+.form-new-site textarea{
+    width: 500px;
+    display: flex;
+    height: 100px;
+    font-size: 20px;
+    border: 1px solid gray;
+}
+.form-new-site{
+    background-color: rgb(255, 255, 255);
+    padding: 25px 30px;
+    box-shadow: 0 0 35px rgb(178, 252, 185);
+}
+.create-site-form h3{
+    font-size: 58px;
+    font-family: 'Papyrus';
+}
