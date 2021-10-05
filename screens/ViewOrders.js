@@ -54,7 +54,14 @@ const ViewOrders = () =>{
 const styles = StyleSheet.create({
     myCardOrder:{
         margin:5,
-        padding:5
+        padding:5,
+        shadowColor: '#000',
+        shadowOffset:{
+            width:5,
+            height:4,
+        },
+        shadowOpacity:30,
+        borderRadius:25
     }
 })
 

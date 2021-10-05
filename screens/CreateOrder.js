@@ -129,10 +129,27 @@ const CreateOrder = () => {
 
 const styles = StyleSheet.create({
     root:{
-        flex:1
+        flex:1,
+        shadowColor: '#000',
+        shadowOffset:{
+            width:5,
+            height:4,
+        },
+        shadowOpacity:30,
+        borderRadius:25
+    
+        
     },
     inputStyle:{
-        margin:5
+        margin:5,
+        shadowColor: '#000',
+        shadowOffset:{
+            width:5,
+            height:4,
+        },
+        shadowOpacity:30,
+        borderRadius:25
+    
     }
 })
 
