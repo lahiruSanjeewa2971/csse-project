@@ -21,6 +21,7 @@ app.use('/api', require('./routes/orderRouter'));
 
 //maanger
 app.use('/manager', require('./routes/SitesRouter'));
+app.use('/manager', require('./routes/PolicyRouter'))
 
 /////////Mobile part/////////////////
 app.post('/send-data',(req,res) =>{

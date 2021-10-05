@@ -58,9 +58,26 @@ function Sidebar() {
                     <Link to ="/maange-site_manager" style={{textDecoration:"none", color:"white"}}>
                         <CardTravelOutlined className="sidebarIcon"/>
                             Manage Sites
-                 </Link>
+                    </Link>
                     </li>
                 </ul>
+
+                <h3 className="sidebarTitle">Policy</h3>
+                <ul className="sidebarList">
+                    <li className="sidebarListItem">
+                    <Link to ="/create-Policy_manager" style={{textDecoration:"none", color:"white"}}>
+                        <CardTravelOutlined className="sidebarIcon"/>
+                            Policy
+                    </Link>
+                    </li>
+                    <li className="sidebarListItem">
+                    <Link to ="/create-Policy_manager" style={{textDecoration:"none", color:"white"}}>
+                        <CardTravelOutlined className="sidebarIcon"/>
+                            Manage Policy
+                    </Link>
+                    </li>
+                </ul>
+
                 
             </div>
         </div>
