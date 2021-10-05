@@ -4,32 +4,26 @@ import {TextInput, Button} from 'react-native-paper'
 
 const CreateOrder = () => {
     const[orderID, SetOrderID] = useState("")
-    const[date, SetDate] = useState("")
-    const[createrName, SetcreatorName] = useState("")
-    const[companyName, SetCompanyname] = useState("")
-    // const[items, SetItems] = useState("")
-    const[quantity, SetQuantity] = useState("")
-    const[description, SetDescription] = useState("")
-    const[itemList, SetItemList] = useState("")
-    const[deliveryAddress, SetDelivery] = useState("")
+    const[siteManager, SetSiteManager] = useState("")
+    const[siteAddress, SetSiteAdrs] = useState("")
+    const[enquiri, SetEnquiri] = useState("")
+   
     const[modal, setModal] = useState(false)
 
     //navigation removed
     const submitData = () =>{
        
-            fetch("http://localhost:5000/send-data",{
+            fetch("http://localhost:5000/send-enquiri",{
                 method:"post",
                 headers:{
                     'Content-Type':'application/json'
                 },
                 body:JSON.stringify({
                     orderID,
-                    date,
-                    createrName,
-                    quantity,
-                    description,
-                    itemList,
-                    deliveryAddress
+                    siteManager,
+                    enquiri,
+                    siteAddress
+                   
                 })
             })
             .then(res=>res.json())
@@ -50,60 +44,30 @@ const CreateOrder = () => {
                 />
 
             <TextInput
-                label='Date'
-                value={date}
+                label='Site Manager'
+                value={siteManager}
                 mode="outlined"
-                onChangeText={text => SetDate(text)}
+                onChangeText={text => SetSiteManager(text)}
                 />
 
             <TextInput
-                label='Name'
-                value={createrName}
+                label='Your Enquiri'
+                value={enquiri}
                 mode="outlined"
-                onChangeText={text => SetcreatorName(text)}
-                />
-
-            
-            <TextInput
-                label='Company Name'
-                value={companyName}
-                mode="outlined"
-                onChangeText={text => SetCompanyname(text)}
+                onChangeText={text => SetEnquiri(text)}
                 />
 
             <TextInput
-                label='Item List'
-                value={itemList}
+                label='Site Address'
+                value={siteAddress}
                 mode="outlined"
-                onChangeText={text => SetItemList(text)}
+                onChangeText={text => SetSiteAdrs(text)}
                 />
-            
-            <TextInput
-                label='Quantity'
-                value={quantity}
-                mode="outlined"
-                onChangeText={text => SetQuantity(text)}
-                />
-
-            <TextInput
-                label='Description'
-                value={description}
-                mode="outlined"
-                onChangeText={text => SetDescription(text)}
-                />
-
-            
-            <TextInput
-                label='Delivery Address'
-                value={deliveryAddress}
-                mode="outlined"
-                onChangeText={text => SetDelivery(text)}
-                />
-
+        
 
 
                 <Button mode="contained" onPress={() => submitData()}>
-                    Save
+                    Send
                 </Button>
 
                 {/* <Modal
