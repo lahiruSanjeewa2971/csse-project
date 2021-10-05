@@ -76,12 +76,12 @@ function Sidebar() {
                             View Orders
                     </Link>
                     </li>
-                    <li className="sidebarListItem">
+                    {/* <li className="sidebarListItem">
                     <Link to ="/orders-list" style={{textDecoration:"none", color:"white"}}>
                         <CardTravelOutlined className="sidebarIcon"/>
-                            Add Foods
+                            
                  </Link>
-                    </li>
+                    </li> */}
                    
                 </ul>
                 <h3 className="sidebarTitle">Reports</h3>

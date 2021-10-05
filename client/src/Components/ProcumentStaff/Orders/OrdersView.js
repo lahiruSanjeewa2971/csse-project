@@ -23,7 +23,8 @@ function OrdersView() {
                             <th>Ordered Date</th>
                             <th>Number Of items</th>
                             <th>Delivery Address</th>
-                            <th>View Ordered Items</th>
+                            <th>Status</th>
+                            <th>Status</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -36,10 +37,13 @@ function OrdersView() {
                                     <td>{singleOrder.date}</td>
                                     <td>{singleOrder.quantity}</td>
                                     <td>{singleOrder.deliveryAddress}</td>
+                                    <td>{singleOrder.status}</td>
                                     <td>
                                         {/* <Link  to={`/neworder/${singleOrder._id}`} >View Items</Link> */}
                                         <a href={`/neworder/${singleOrder._id}`}>View Items</a>
                                     </td>
+                                     
+
                                 </tr>
                             ))
                         }

@@ -1,10 +1,8 @@
 import React, { useContext } from 'react'
 import {GlobalState} from '../../../GlobalState' 
-import { Link } from 'react-router-dom'
 import './dashboard.css'
-
-
-
+import { Link } from 'react-router-dom'
+  
 function PHome() {
     const state = useContext(GlobalState)
     const [orderList] = state.ordersAPI.ordersNew  
@@ -30,19 +28,10 @@ function PHome() {
 
             <div className="third-group">
                 <div className="third-group-first-box1">
-                    <h4>Account Details</h4>
+                    <h4 style={{fontSize:35 }}>Account Details</h4>
                     <div className="link">
-                        <button   style={{width:'140px',
-                            fontSize: '18px',
-                            height: '34px',
-                            marginTop: '20px',
-                            color: "black",
-                            backgroundColor: "#48D1CC"
-                        }} >
-                            View Accounts 
-                        </button>  
-
-                        <a href={`/acount-details`}>View Accounts</a>
+                        <Link style={{fontSize:35 }} id= "btn_neworder" to={`/acount-details `} >View Accounts</Link>  
+ 
                     </div>
                     
 
