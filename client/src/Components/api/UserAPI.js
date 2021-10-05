@@ -7,6 +7,7 @@ function CSUserAPI(token) {
     const [isManager, setIsManager] = useState(false)
     const [isSupplier, setIsSupplier] = useState(false)
     const [IsProcumentStaff, setIsProcumentStaff] = useState(false)
+    const [IsSitemanager, setIsSiteManager] = useState(false)
 
     useEffect(()=>{
         if(token){
@@ -20,11 +21,12 @@ function CSUserAPI(token) {
                     setIsLogged(true)
                     res.data.role === 1 ? setIsManager(true) : setIsManager(false)
                     res.data.role === 2 ? setIsProcumentStaff(true) : setIsProcumentStaff(false)
-                    res.data.role === 3 ? setIsSupplier(true) : setIsSupplier(false)
+                    res.data.role === 3 ? setIsSiteManager(true) : setIsSiteManager(false)
+                    res.data.role === 0 ? setIsSupplier(true) : setIsSupplier(false)
                    
                     
                 }catch(err){
-                    alert(err.response.data.msg)
+                    alert(err)
                 }
             }
             getUser()
@@ -56,6 +58,7 @@ function CSUserAPI(token) {
         isManager: [isManager, setIsManager],
         isSupplier: [isSupplier, setIsSupplier],
         isProcumentStaff: [IsProcumentStaff, setIsProcumentStaff],
+        isSitemanager: [IsSitemanager, setIsSiteManager],
         cart: [cart, setCart],
         addCart: addCart,
         history: [history, setHistory]

@@ -9,7 +9,8 @@ import Grow from '@material-ui/core/Grow';
 import Paper from '@material-ui/core/Paper';
 import Popper from '@material-ui/core/Popper';
 import MenuList from '@material-ui/core/MenuList';
-
+import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
 import axios from 'axios'
 import {Link} from 'react-router-dom'
 
@@ -63,7 +64,7 @@ const loggedRouter = () =>{
   return (
     <>
                        <div className="topbarIconsContainer">
-                            
+                       <NotificationsNoneIcon/>
                             <span className="topIconBag">
                                 2
                             </span>
@@ -76,6 +77,9 @@ const loggedRouter = () =>{
                                 onClick={handleToggle}
                                 
                                 >
+                                 
+                            
+                             <MoreVertIcon/>
                               
                         </Button>
                         <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>

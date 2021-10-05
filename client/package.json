@@ -3,20 +3,29 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-react": "^7.14.5",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
+    "@mui/icons-material": "^5.0.1",
     "@mui/material": "^5.0.2",
+    "@progress/kendo-drawing": "^1.14.0",
+    "@progress/kendo-licensing": "^1.2.0",
+    "@progress/kendo-react-form": "^4.9.0",
+    "@progress/kendo-react-pdf": "^4.9.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.22.0",
+    "babel-jest": "^27.2.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.0",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
+    "react-test-renderer": "^17.0.2",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
@@ -43,5 +52,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:5000"
+  "proxy": "http://localhost:5000",
+  "devDependencies": {
+    "jest": "^27.2.4"
+  }
 }

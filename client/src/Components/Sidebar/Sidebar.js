@@ -12,6 +12,7 @@ function Sidebar() {
     const [isProcumentStaff] = state.userAPI.isProcumentStaff;
     const [isManager] = state.userAPI.isManager;
     const [isSupplier]= state.userAPI.isSupplier;
+    const [isSiteManager]= state.userAPI.isSitemanager;
     const [token] = state.token;
 
 
@@ -116,7 +117,61 @@ function Sidebar() {
    
         )
     }
-
+    const siteManagerRouter = () =>{
+        return (
+            <div className="sidebarWrappper">
+            <div className="sidebarMenu">
+                <h3 className="sidebarTitle">Dashboard</h3>
+                <ul className="sidebarList">
+                    <li className="sidebarListItem active">
+                        <Link to ="/viewHome" style={{textDecoration:"none", color:"white"}}>
+                        <Home className="sidebarIcon"/>
+                            Home
+                        </Link>
+                    </li>
+                </ul>
+                <h3 className="sidebarTitle">Menu</h3>
+                <ul className="sidebarList">
+                    <li className="sidebarListItem">
+                    <Link to ="/menu" style={{textDecoration:"none", color:"white"}}>
+                        <CardTravelOutlined className="sidebarIcon"/>
+                            Menu
+                    </Link>
+                    </li>
+                </ul>
+                <h3 className="sidebarTitle">Contact us</h3>
+                <ul className="sidebarList">
+                    <li className="sidebarListItem">
+                    <Link to ="/map" style={{textDecoration:"none", color:"white"}}>
+                        <PeopleAltOutlined className="sidebarIcon"/>
+                            Contact
+                    </Link>
+                    </li>
+                </ul>
+                <h3 className="sidebarTitle">About</h3>
+                <ul className="sidebarList">
+                    <li className="sidebarListItem">
+                    <Link to ="/messages" style={{textDecoration:"none", color:"white"}}>
+                        <NoteAddOutlined className="sidebarIcon"/>
+                            About Us
+                    </Link>
+                    </li>
+                    
+                </ul>
+                <h3 className="sidebarTitle">Display User</h3>
+                <ul className="sidebarList">
+                    <li className="sidebarListItem">
+                    <Link to ="/display" style={{textDecoration:"none", color:"white"}}>
+                        <NoteAddOutlined className="sidebarIcon"/>
+                            About Us
+                    </Link>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        )
+    }
     const supplierRouter = () =>{
         return(
             
@@ -125,7 +180,7 @@ function Sidebar() {
                     <h3 className="sidebarTitle">Dashboard</h3>
                     <ul className="sidebarList">
                         <li className="sidebarListItem active">
-                            <Link to ="/cs-dashboard" style={{textDecoration:"none", color:"white"}}>
+                            <Link to ="/home" style={{textDecoration:"none", color:"white"}}>
                             <Home className="sidebarIcon"/>
                                 Home
                             </Link>
@@ -156,7 +211,7 @@ function Sidebar() {
                          </Link>
                         </li>
                         <li className="sidebarListItem">
-                        <Link to ="/category-list" style={{textDecoration:"none", color:"white"}}> 
+                        <Link to ="/vehicles" style={{textDecoration:"none", color:"white"}}> 
                             <ListAltOutlined className="sidebarIcon"/>
                                  Manage Vehicles
                          </Link>
@@ -212,6 +267,7 @@ function Sidebar() {
              {isManager && isLogged && managerRouter()}
              {isSupplier &&  isLogged && supplierRouter()}
              {isProcumentStaff && isLogged && procumentStaffRouter()}
+             {isSiteManager && isLogged && siteManagerRouter()}
            
          </div>
    
