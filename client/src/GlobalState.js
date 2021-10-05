@@ -4,6 +4,8 @@ import UserAPI from './Components/api/UserAPI'
 import EmployeeAPI from './Components/api/manager/EmployeeAPI'
 import SitesAPI from './Components/api/manager/SitesAPI'
 
+import OrdersAPI from './Components/api/PSA/ViewOrderAPI'
+
 export const GlobalState = createContext()
 
 export const DataProvider = ({children}) => {
@@ -34,7 +36,10 @@ export const DataProvider = ({children}) => {
         token: [token, setToken],
         userAPI: UserAPI(token),
         employeeList: EmployeeAPI(),
+
+        ordersAPI: OrdersAPI()
         sitesList: SitesAPI()
+
     }
     
     return (

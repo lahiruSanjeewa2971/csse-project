@@ -21,6 +21,15 @@ app.use(fileUpload({
 app.use('/user', require('./routes/userRouter'));
 app.use('/api', require('./routes/orderRouter'));
 
+
+//supplier 
+app.use('/supplier', require('./routes/orders_Supplier_Routes'));
+app.use('/supplier', require('./routes/uploadImagesForSupplier'));
+app.use('/supplier', require('./routes/VehicleRouter'));
+
+//PSA
+app.use('/psa', require('./routes/orders_PSA_Router'));
+
 //maanger
 app.use('/manager', require('./routes/SitesRouter'));
 app.use('/manager', require('./routes/PolicyRouter'))

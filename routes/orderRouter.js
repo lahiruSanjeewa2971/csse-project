@@ -20,4 +20,16 @@ router.route('/additems/:id')
 
 router.route('/calculateAmount/:id')
     .get(OrdersCtrl.calculateAmount)
+
+
+    router.route("/getorders").post( (req, res) => {
+        Researcher.find({orderID: req.body.orderID}, (docs, err) => {
+            if(!err){
+                res.send(docs);
+            }
+            else{
+                res.send(err);
+            }
+        })
+    })
 module.exports = router
