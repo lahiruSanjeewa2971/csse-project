@@ -12,7 +12,7 @@ const EdataSchema = new mongoose.Schema({
     deliveryAddress:String,
     status:{
         type: String,
-        default:''
+        default:'pending'
     },
     itemList:{
         type: Array,
