@@ -1,4 +1,4 @@
-const Orders = require('../models/ordersModel')
+const Orders = require('../models/EdataModel')
 class APIfeatures{
     constructor(query, queryString){
         this.query = query;
