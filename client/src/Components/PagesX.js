@@ -4,6 +4,7 @@ import {Switch, Route} from 'react-router-dom'
 import MHome from '../Components/Manager/Dashboard/MHome';
 import PHome from '../Components/ProcumentStaff/Dashboard/PHome';
 import SHome from '../Components/Supplier/Dashboard/SHome';
+import NewPolicy from './ManagerComponents/Policy/NewPolicies/NewPolicy';
 
 //manager Router
 import AddEmployee from './ManagerComponents/HRM/AddEmployee/AddEmployee';
@@ -28,6 +29,7 @@ function PagesX() {
                 <Route path="/manage_employee_manager" exact component={ManageEmployees} />
                 <Route path="/create-site_manager" exact component={CreateSite} />
                 <Route path="/maange-site_manager" exact component={ManageSites} />
+                <Route path="/create-Policy_manager" exact component={NewPolicy} />
 
             </Switch>
         </div>
