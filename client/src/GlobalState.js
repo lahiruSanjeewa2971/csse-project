@@ -3,6 +3,8 @@ import axios from 'axios'
 import UserAPI from './Components/api/UserAPI'
 import EmployeeAPI from './Components/api/manager/EmployeeAPI'
 
+import OrdersAPI from './Components/api/PSA/ViewOrderAPI'
+
 export const GlobalState = createContext()
 
 export const DataProvider = ({children}) => {
@@ -32,7 +34,9 @@ export const DataProvider = ({children}) => {
     const state = {
         token: [token, setToken],
         userAPI: UserAPI(token),
-        employeeList: EmployeeAPI()
+        employeeList: EmployeeAPI(),
+
+        ordersAPI: OrdersAPI()
     }
     
     return (

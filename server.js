@@ -24,6 +24,9 @@ app.use('/supplier', require('./routes/orders_Supplier_Routes'));
 app.use('/supplier', require('./routes/uploadImagesForSupplier'));
 app.use('/supplier', require('./routes/VehicleRouter'));
 
+//PSA
+app.use('/psa', require('./routes/orders_PSA_Router'));
+
 
 /////////Mobile part/////////////////
 app.post('/send-data',(req,res) =>{
