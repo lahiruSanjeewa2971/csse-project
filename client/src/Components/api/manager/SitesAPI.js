@@ -1,13 +1,13 @@
 import  {useState, useEffect} from 'react'
 import axios from 'axios'
 
-function EmployeeAPI() {
-    const [employee, setemployee] = useState([])
+function SitesAPI() {
+    const [sites, setsites] = useState([])
     const [callback, setCallback] = useState(false)
 
     const getCustomerList = async () => {
-        const res = await axios.get('/user/getUserList')
-        setemployee(res.data)
+        const res = await axios.get('/manager/sites')
+        setsites(res.data)
         //console.log(res.data)
     }
 
@@ -16,9 +16,9 @@ function EmployeeAPI() {
     }, [])
     
     return {
-        employeeList: [employee, setemployee],
+        sitesList: [sites, setsites],
         callback: [callback, setCallback]
     }
 }
  
-export default EmployeeAPI
+export default SitesAPI

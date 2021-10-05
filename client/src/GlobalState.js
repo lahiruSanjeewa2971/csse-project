@@ -2,6 +2,7 @@ import React, {createContext, useState, useEffect} from 'react'
 import axios from 'axios'
 import UserAPI from './Components/api/UserAPI'
 import EmployeeAPI from './Components/api/manager/EmployeeAPI'
+import SitesAPI from './Components/api/manager/SitesAPI'
 
 import OrdersAPI from './Components/api/PSA/ViewOrderAPI'
 
@@ -37,6 +38,8 @@ export const DataProvider = ({children}) => {
         employeeList: EmployeeAPI(),
 
         ordersAPI: OrdersAPI()
+        sitesList: SitesAPI()
+
     }
     
     return (
