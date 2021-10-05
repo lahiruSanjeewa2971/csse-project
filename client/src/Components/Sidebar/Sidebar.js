@@ -45,8 +45,40 @@ function Sidebar() {
                             Manage Employee
                  </Link>
                     </li>
-                   
                 </ul>
+                {/**create-site_manager */}
+                <h3 className="sidebarTitle">Sites</h3>
+                <ul className="sidebarList">
+                    <li className="sidebarListItem">
+                    <Link to ="/create-site_manager" style={{textDecoration:"none", color:"white"}}>
+                        <CardTravelOutlined className="sidebarIcon"/>
+                            Create New Site
+                    </Link>
+                    </li>
+                    <li className="sidebarListItem">
+                    <Link to ="/maange-site_manager" style={{textDecoration:"none", color:"white"}}>
+                        <CardTravelOutlined className="sidebarIcon"/>
+                            Manage Sites
+                    </Link>
+                    </li>
+                </ul>
+
+                <h3 className="sidebarTitle">Policy</h3>
+                <ul className="sidebarList">
+                    <li className="sidebarListItem">
+                    <Link to ="/create-Policy_manager" style={{textDecoration:"none", color:"white"}}>
+                        <CardTravelOutlined className="sidebarIcon"/>
+                            Policy
+                    </Link>
+                    </li>
+                    <li className="sidebarListItem">
+                    <Link to ="/create-Policy_manager" style={{textDecoration:"none", color:"white"}}>
+                        <CardTravelOutlined className="sidebarIcon"/>
+                            Manage Policy
+                    </Link>
+                    </li>
+                </ul>
+
                 
             </div>
         </div>
@@ -63,55 +95,40 @@ function Sidebar() {
                 <h3 className="sidebarTitle">Dashboard</h3>
                 <ul className="sidebarList">
                     <li className="sidebarListItem active">
-                        <Link to ="/kitchendashboard" style={{textDecoration:"none", color:"white"}}>
+                        <Link to ="/psa-dashboard" style={{textDecoration:"none", color:"white"}}>
                         <Home className="sidebarIcon"/>
                             Home
                         </Link>
                     </li>
                 </ul>
-                <h3 className="sidebarTitle">Menu</h3>
+                <h3 className="sidebarTitle">Orders</h3>
                 <ul className="sidebarList">
                     <li className="sidebarListItem">
-                    <Link to ="/menu/foods" style={{textDecoration:"none", color:"white"}}>
+                    <Link to ="/view-orders" style={{textDecoration:"none", color:"white"}}>
                         <CardTravelOutlined className="sidebarIcon"/>
-                            Foods
+                            View Orders
                     </Link>
                     </li>
-                    <li className="sidebarListItem">
-                    <Link to ="/menu/addnewfood" style={{textDecoration:"none", color:"white"}}>
+                    {/* <li className="sidebarListItem">
+                    <Link to ="/orders-list" style={{textDecoration:"none", color:"white"}}>
                         <CardTravelOutlined className="sidebarIcon"/>
-                            Add Foods
+                            
                  </Link>
-                    </li>
+                    </li> */}
                    
                 </ul>
                 <h3 className="sidebarTitle">Reports</h3>
                 <ul className="sidebarList">
                     <li className="sidebarListItem">
-                    <Link to ="/reports/reports2" style={{textDecoration:"none", color:"white"}}>
+                    <Link to ="/acount-details" style={{textDecoration:"none", color:"white"}}>
                         <ListAltOutlined className="sidebarIcon"/>
-                             Foods Reports
+                             Account Details
                     </Link>
                     </li>
                     
                 </ul>
                 
-                <h3 className="sidebarTitle">Daily Menu</h3>
-                <ul className="sidebarList">
-                    <li className="sidebarListItem">
-                    <Link to ="/daily" style={{textDecoration:"none", color:"white"}}>
-                        <NoteAddOutlined className="sidebarIcon"/>
-                            Add Daily Menu
-                    </Link>
-                    </li>
-                    <li className="sidebarListItem">
-                        <Link to ="/viewdailymenu" style={{textDecoration:"none", color:"white"}}>
-                            <DescriptionOutlined className="sidebarIcon"/>
-                           View Daily Menu
-                        </Link>
-                    </li>
-                    
-                </ul>
+                 
             </div>
         </div>
    
